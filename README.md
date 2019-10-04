@@ -103,8 +103,3 @@ $ ./rabbit/start_rabbit.sh
 | 10000                 | 1                     | 130 KB     |
 | 100000                | 10                    | 149 KB     |
 | 1000000               | 100                   | 313 KB     |
-
-## Results anylysis
-- Number of unique keys doesn't influence final state size
-- Size of message doesn't influence final state size
-- Number of messages sent seems to increase state size indefinitely
