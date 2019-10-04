@@ -35,7 +35,7 @@ $ ./rabbit/start_rabbit.sh
 ## Outcome results
 ### Scenario 1
 - Unique keys: 100
-- Initial state: 15.8 KB
+- Initial state: 127 KB
 - Message size: 106 B
 
 | Messages sent overall | Messages sent per key | State size |
@@ -47,7 +47,7 @@ $ ./rabbit/start_rabbit.sh
 ---
 ### Scenario 2
 - Unique keys: 1000
-- Initial state: 15.8 KB
+- Initial state: 127 KB
 - Message size: 106 B
 
 | Messages sent overall | Messages sent per key | State size |
@@ -59,7 +59,7 @@ $ ./rabbit/start_rabbit.sh
 ---
 ### Scenario 3
 - Unique keys: 10000
-- Initial state: 15.8 KB
+- Initial state: 127 KB
 - Message size: 106 B
 
 | Messages sent overall | Messages sent per key | State size |
@@ -71,7 +71,7 @@ $ ./rabbit/start_rabbit.sh
 ---
 ### Scenario 4
 - Unique keys: 100
-- Initial state: 15.8 KB
+- Initial state: 127 KB
 - Message size: 1060 B
 
 | Messages sent overall | Messages sent per key | State size |
@@ -83,7 +83,7 @@ $ ./rabbit/start_rabbit.sh
 ---
 ### Scenario 5
 - Unique keys: 1000
-- Initial state: 15.8 KB
+- Initial state: 127 KB
 - Message size: 1060 B
 
 | Messages sent overall | Messages sent per key | State size |
@@ -95,7 +95,7 @@ $ ./rabbit/start_rabbit.sh
 ---
 ### Scenario 6
 - Unique keys: 10000
-- Initial state: 15.8 KB
+- Initial state: 127 KB
 - Message size: 1060 B
 
 | Messages sent overall | Messages sent per key | State size |
