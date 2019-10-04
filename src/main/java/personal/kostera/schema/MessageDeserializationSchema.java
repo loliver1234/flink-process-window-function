@@ -31,7 +31,8 @@ public class MessageDeserializationSchema implements DeserializationSchema<Messa
             final ObjectNode messageJson = this.mapper.readValue(message, ObjectNode.class);
             final String messageId = messageJson.get("messageId").textValue();
             final String status = messageJson.get("status").textValue();
-            final Map<String, Object> messageProperties = getMapFromJsonNode(messageJson);
+            final JsonNode properties = messageJson.get("properties");
+            final Map<String, Object> messageProperties = getMapFromJsonNode(properties);
             return new Message(messageId, status, messageProperties);
         } catch (Exception e) {
             // Do nothing

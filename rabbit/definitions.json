@@ -1,0 +1,52 @@
+{
+  "vhosts": [
+    {
+      "name": "/"
+    }
+  ],
+  "exchanges": [
+    {
+      "name": "flink_ex",
+      "vhost": "/",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "queues": [
+    {
+      "name": "flink_input",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "flink_output",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    }
+  ],
+  "bindings": [
+    {
+      "source": "flink_ex",
+      "vhost": "/",
+      "destination": "flink_output",
+      "destination_type": "queue",
+      "routing_key": "processed_messages",
+      "arguments": {}
+    },
+    {
+      "source": "flink_ex",
+      "vhost": "/",
+      "destination": "flink_input",
+      "destination_type": "queue",
+      "routing_key": "pre_processing",
+      "arguments": {}
+    }
+  ]
+}
